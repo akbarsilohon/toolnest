@@ -94,26 +94,6 @@ export default function JSONFormatterPage() {
 
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
-      {/* Header */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <a href="/" className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-xl font-bold text-white">
-              T
-            </span>
-            <span className="text-xl font-bold tracking-tight">
-              Tool<span className="text-blue-600">Nest</span>
-            </span>
-          </a>
-
-          <a
-            href="/"
-            className="text-sm font-medium text-slate-500 transition hover:text-blue-600"
-          >
-            ← Back to Home
-          </a>
-        </div>
-      </header>
 
       {/* Main */}
       <section className="mx-auto max-w-7xl px-6 py-12 md:py-16">
@@ -317,21 +297,6 @@ export default function JSONFormatterPage() {
           </article>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white px-6 py-7">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-slate-400 md:flex-row">
-          <p>© 2026 ToolNest. All rights reserved.</p>
-
-          <div className="flex gap-6">
-            <a href="/about" className="hover:text-blue-600">About</a>
-            <a href="/privacy-policy" className="hover:text-blue-600">
-              Privacy Policy
-            </a>
-            <a href="/contact" className="hover:text-blue-600">Contact</a>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

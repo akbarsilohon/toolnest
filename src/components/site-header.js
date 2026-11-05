@@ -1,8 +1,13 @@
 
-import Link from "next/link";
+"use client";
 
-export default function SiteHeader({ variant = "home" }) {
-  const isToolPage = variant === "tool";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function SiteHeader() {
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
 
   return (
     <header className="border-b border-slate-200 bg-white">
@@ -20,7 +25,7 @@ export default function SiteHeader({ variant = "home" }) {
         </Link>
 
         {/* Homepage Navigation */}
-        {!isToolPage && (
+        {isHomePage && (
           <>
             <nav className="hidden items-center gap-8 md:flex">
               <a
@@ -54,8 +59,8 @@ export default function SiteHeader({ variant = "home" }) {
           </>
         )}
 
-        {/* Tool Page Navigation */}
-        {isToolPage && (
+        {/* Other Pages Navigation */}
+        {!isHomePage && (
           <Link
             href="/"
             className="text-sm font-medium text-slate-500 transition hover:text-blue-600"
